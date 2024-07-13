@@ -1,0 +1,40 @@
+.title{
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: rgb(16, 17, 17);
+}
+.navbar-container33 {
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    background-color: rgb(132, 191, 233);
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.filterSort {
+    display: flex;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+  
+.search-form1 {
+    width: 30vw;
+    display: flex;
+    height: 50px;
+    padding-top: 10px;
+}
+
+.dropdown1 {
+    border-radius: 10px;
+}
+
+.dropdown2 {
+    border-radius: 10px;
+}
+
+.search-button {
+    border-radius: 5px;
+    width: 10vw;
+}

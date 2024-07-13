@@ -1,0 +1,11 @@
+<ul class="nav nav-pills nav-fill">
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/todo']" [class.active]="isActive('/todo')">To Do</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/completed']" [class.active]="isActive('/completed')">Completed</a>
+    </li>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/cancelled']" [class.active]="isActive('/cancelled')">Cancelled</a>
+    </li>
+</ul>

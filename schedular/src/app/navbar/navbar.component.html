@@ -1,0 +1,25 @@
+<div class="navbar-container33">
+    <h2 class="title">Schedular</h2>
+    <div class="search-form1">
+        <input type="text" class="form-control" placeholder="Search" [(ngModel)]="ipftodo.search">
+    </div>
+    <div class="filterSort">
+        <div class="dropdown1">
+            <select class="custom-select1" [(ngModel)]="ipftodo.filter" required>
+            <option selected value="tag">Filter by Priority</option>
+            <option value="low">Low</option>  
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            </select>
+        </div>
+        <div class="dropdown2">
+            <select class="custom-select2" [(ngModel)]="ipftodo.sort" required>
+            <option selected value="tag">Sort by</option>
+            <option value="aToz">By Title: A-Z</option>
+            <option value="zToa">By Title: Z-A</option>
+            <option value="lowToHigh">By Priority: Low to High</option>
+            <option value="highToLow">By Priority: High to Low</option>
+            </select>
+        </div>
+    </div>
+</div>

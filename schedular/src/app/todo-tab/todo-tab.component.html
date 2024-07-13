@@ -1,0 +1,33 @@
+<navbar class="navbar" (searchValue)="handleSearchEvent($event)" [ipftodo]="navVal"></navbar>
+<span class="addTask" (click)="onClickAddTask()">
+    <button class="material-icons icon addIcon" >add_circle</button>
+    <h4 class="addText">Click here to add new task</h4>
+</span>
+
+<div *ngIf="newTaskFlag">
+    <form (ngSubmit)="onSubmit()" #taskForm="ngForm" class="newTaskForm">
+        <label>Title:</label>
+        <input type="text" name="title" [(ngModel)]="newTask.title" 
+               placeholder="{{ titlePlaceholder }}" (focus)="titlePlaceholder = ''" (blur)="titlePlaceholder = 'Enter task title'" required>
+  
+        <label>Description:</label>
+        <textarea name="description" [(ngModel)]="newTask.description" 
+                  placeholder="{{ descriptionPlaceholder }}" (focus)="descriptionPlaceholder = ''" (blur)="descriptionPlaceholder = 'Enter task description'" required></textarea>
+  
+        <div class="prioritySelect">
+            <label class="priorityLabel">Priority:</label>
+            <select class="priorityDropdown" name="priority" [(ngModel)]="newTask.priority" required>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+            </select>
+        </div>
+        
+        <button class="formSubmitButton" type="submit">Add Task</button>
+    </form>
+</div>
+
+<div *ngFor="let val of getViewList()">
+    <single-item [taskElement]="val" [currentTab]="'todo'" 
+    (taskCompleted)="handleTaskCompleted($event)" (taskNotRequire)="handleTaskNotRequire($event)"></single-item>
+</div>

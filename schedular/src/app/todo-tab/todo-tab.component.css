@@ -1,0 +1,101 @@
+.addTask {
+    display: flex;
+}
+
+.addTask:hover {
+    display: flex;
+    cursor: pointer;
+}
+
+.addIcon {
+    border: 0cap;
+    background-color: white;
+}
+
+.addText {
+    padding-top: 9px;
+}
+
+.navbar {
+    position: fixed;
+    padding-top: 0;
+    top: 0px;
+  }
+
+.newTaskForm {
+    width: 40%;
+    margin: 20px 10px; /* Centers the form horizontally */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.newTaskForm label {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.newTaskForm input[type="text"],
+.newTaskForm textarea,
+.newTaskForm select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    font-size: 14px;
+}
+
+.newTaskForm textarea {
+    resize: vertical; /* Allows vertical resizing */
+}
+
+.newTaskForm select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer; /* Shows cursor as pointer on hover */
+}
+
+.prioritySelect {
+    display: flex;
+    flex-direction: row;
+}
+
+.priorityDropdown {
+    margin-left: 15px;
+    margin-right: 250px;
+}
+
+.priorityLabel {
+    padding-top: 5px;
+}
+
+.newTaskForm button.formSubmitButton {
+    width: 40%;
+    padding: 10px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50; /* Green background color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer; /* Shows cursor as pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.newTaskForm button.formSubmitButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.newTaskForm button.formSubmitButton:disabled {
+    background-color: #cccccc; /* Grayed out when disabled */
+    cursor: not-allowed; /* Shows cursor as not-allowed when disabled */
+}

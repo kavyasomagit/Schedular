@@ -1,0 +1,68 @@
+<div class="card mb3 text-bg-light">
+    <div class="card-header" (click)="onTitleClick()" *ngIf="!isTitleEditable">
+        <div class="title">{{ taskElement.title }}</div>
+        <span *ngIf="!showFlag" class="btn btn-secondary"
+        [class.text-bg-success]="taskElement.priority === 'low'"
+        [class.text-bg-warning]="taskElement.priority === 'medium'"
+        [class.text-bg-danger]="taskElement.priority === 'high'">
+            {{taskElement.priority}}
+        </span>
+    </div>
+
+    <div *ngIf="isTitleEditable" class="card-header">
+        <input type="text" class="form-control" [(ngModel)]="taskElement.title">
+        <span *ngIf="!showFlag" class="btn btn-secondary"
+              [class.text-bg-success]="taskElement.priority === 'low'"
+              [class.text-bg-warning]="taskElement.priority === 'medium'"
+              [class.text-bg-danger]="taskElement.priority === 'high'">
+          {{ taskElement.priority }}
+        </span>
+    </div>
+
+
+    <div *ngIf="showFlag" class="card-body text-bg-light">
+        <div *ngIf="!isTitleEditable">
+            <p class="card-text">{{ taskElement.description }}</p>
+            <div class="priority">
+                <p class="card-text">Priority:</p>
+                <span class="btn btn-secondary"
+                    [class.text-bg-success]="taskElement.priority === 'low'"
+                    [class.text-bg-warning]="taskElement.priority === 'medium'"
+                    [class.text-bg-danger]="taskElement.priority === 'high'">
+                    {{ taskElement.priority }}
+                </span>
+            </div>
+        </div>
+
+        <div *ngIf="isTitleEditable">
+            <input type="text" class="form-control" [(ngModel)]="taskElement.description">
+            <div class="priority">
+                <p class="card-text">Priority:</p>
+                <div [class.dropup]="dropDownFlag" [class.dropdown]="!dropDownFlag" style="display: inline-block;">
+                    <button class="btn btn-secondary dropdown-toggle" (click)="onPriorityClick()"
+                    [class.text-bg-success]="taskElement.priority === 'low'"
+                    [class.text-bg-warning]="taskElement.priority === 'medium'"
+                    [class.text-bg-danger]="taskElement.priority === 'high'">
+                        {{taskElement.priority}}
+                    </button>
+                    <div *ngIf="dropDownFlag">
+                        <button class="dropdown-item" (click)="updatePriority('low')">low</button>
+                        <button class="dropdown-item" (click)="updatePriority('medium')">medium</button>
+                        <button class="dropdown-item" (click)="updatePriority('high')">high</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div *ngIf="currentTab=='todo'" class="buttons">
+            <button *ngIf="!isTitleEditable" class="update" (click)="onClickUpdate()">Update Task</button>
+            <button *ngIf="isTitleEditable" class="update" (click)="onClickUpdate()">Save Changes</button>
+            <button class="complete" (click)="onClickComplete()">Mark Completed</button>
+            <button class="cancel" (click)="onClickNotRequire()">Mark Not Required</button>            
+        </div>
+        <div *ngIf="currentTab!='todo'" class="buttons">
+            <button class="reopen" (click)="onClickReopen()">ReOpen Task</button>
+            <button class="delete" (click)="onClickDelete()">Delete Permanently</button>            
+        </div>
+    </div>
+</div>

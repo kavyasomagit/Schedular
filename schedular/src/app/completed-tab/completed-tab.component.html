@@ -1,0 +1,5 @@
+<navbar class="navbar" [ipftodo]="navVal"></navbar>
+<div *ngFor="let val of getViewList()">
+    <single-item [taskElement]="val" [currentTab]="'complete'" (taskReopen)="handleTaskReopen($event)"
+    (taskDelete)="handleTaskDelete($event)"></single-item>
+</div>

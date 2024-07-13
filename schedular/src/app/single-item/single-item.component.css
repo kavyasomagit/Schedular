@@ -1,0 +1,61 @@
+.buttons {
+    margin-top: 15px;
+    border: 0cap;
+    display: flex; /* Use flexbox to align items in the header */
+}
+
+.cancel {
+    margin-left: 10px;
+    background-color: rgb(230, 66, 12);
+    border-radius: 8px;
+}
+
+.complete {
+    margin-left: 10px;
+    background-color: rgb(30, 241, 83);
+    border-radius: 8px;
+}
+
+.update {
+    background-color: rgb(30, 167, 241);
+    border-radius: 8px;
+}
+
+.delete {
+    margin-left: 10px;
+    background-color: rgb(230, 66, 12);
+    border-radius: 8px;
+}
+
+.reopen {
+    background-color: rgb(30, 167, 241);
+    border-radius: 8px;
+}
+
+.dropdown-item {
+    margin-left: 15px;
+    background-color: beige;
+    border: 1px solid #0a0a0a;
+}
+
+.btn-secondary {
+    margin-left: 15px;
+    width: 120px;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.card-header:hover {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    cursor: pointer;
+}
+
+.priority {
+    display: flex;
+}
