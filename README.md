@@ -1,6 +1,8 @@
 # Schedular
 Developed a comprehensive Todo web application using the Angular. 
 
+Explore the application here: https://schedular-six.vercel.app/
+
 Steps to run the Application:
 
 1. Run 'npm install' to install the node packages used in this project.
